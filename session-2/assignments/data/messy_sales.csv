@@ -1,0 +1,36 @@
+date,customer_id,product,amount,region
+2024-01-15,C001,Widget Pro,149.99,Northeast
+01/15/2024,C002,Basic Widget,29.99,Southwest
+Jan 15, 2024,C003,Widget Deluxe,299.99,Midwest
+2024-01-16,C004, Widget Pro ,149.99,Northeast
+2024-01-16,C005,Basic Widget,29.99,Southeast
+01/17/2024,C006,Widget Deluxe,299.99,West
+2024-01-17,,Widget Pro,149.99,Northeast
+Jan 18, 2024,C008,Basic Widget,,Southwest
+2024-01-18,C009,Widget Deluxe,299.99,Midwest
+2024-01-19,C010,Widget Pro,149.99,Northeast
+01/19/2024,C010,Widget Pro,149.99,Northeast
+2024-01-20,C011,Basic Widget,29.99,Southeast
+Jan 20, 2024,C012, Widget Deluxe ,299.99,West
+2024-01-21,C013,Widget Pro,149.99,Northeast
+2024-01-21,C013,Widget Pro,149.99,Northeast
+01/22/2024,C014,Basic Widget,29.99,Southwest
+2024-01-22,C015,Widget Deluxe,,Midwest
+Jan 23, 2024,C016,Widget Pro,149.99,Northeast
+2024-01-23,C017,Basic Widget,29.99,Southeast
+2024-01-24,,Widget Deluxe,299.99,West
+01/24/2024,C019, Basic Widget,29.99,Northeast
+2024-01-25,C020,Widget Pro,149.99,Southwest
+Jan 25, 2024,C021,Widget Deluxe,299.99,Midwest
+2024-01-26,C022,Basic Widget,29.99,Northeast
+2024-01-26,C022,Basic Widget,29.99,Northeast
+01/27/2024,C023,Widget Pro,149.99,Southeast
+2024-01-27,C024,Widget Deluxe ,299.99,West
+Jan 28, 2024,C025,Basic Widget,29.99,Northeast
+2024-01-28,C026,Widget Pro,,Southwest
+2024-01-29,C027,Widget Deluxe,299.99,Midwest
+01/29/2024,C028, Widget Pro,149.99,Northeast
+2024-01-30,,Basic Widget,29.99,Southeast
+Jan 30, 2024,C030,Widget Deluxe,299.99,West
+2024-01-31,C031,Widget Pro,149.99,Northeast
+01/31/2024,C032,Basic Widget,29.99,Southwest
