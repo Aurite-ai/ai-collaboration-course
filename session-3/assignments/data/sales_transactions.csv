@@ -1,0 +1,58 @@
+date,customer_id,product,quantity,unit_price,region,sales_rep
+2024-01-03,C001,Widget Pro,2,149.99,Northeast,Sarah Chen
+01/04/2024,C002,Basic Widget,5,29.99,Southwest,Mike Johnson
+Jan 5, 2024,C003,Widget Deluxe,1,299.99,Midwest,Lisa Park
+2024-01-06,C004, Widget Pro ,3,149.99,Northeast,Sarah Chen
+2024-01-07,C005,Widget Bundle,1,399.99,Southeast,David Kim
+01/08/2024,C006,Basic Widget,10,29.99,West,Emma Wilson
+2024-01-09,,Widget Pro,2,149.99,Northeast,Sarah Chen
+Jan 10, 2024,C008,Widget Deluxe,,Southwest,Mike Johnson
+2024-01-10,C009,Basic Widget,8,29.99,Midwest,Lisa Park
+2024-01-11,C010,Widget Pro,1,149.99,Northeast,Sarah Chen
+01/12/2024,C010,Widget Pro,1,149.99,Northeast,Sarah Chen
+2024-01-13,C011,Widget Bundle,2,399.99,Southeast,David Kim
+Jan 14, 2024,C012, Widget Deluxe ,1,299.99,West,Emma Wilson
+2024-01-15,C013,Basic Widget,15,29.99,Northeast,Sarah Chen
+2024-01-15,C013,Basic Widget,15,29.99,Northeast,Sarah Chen
+01/16/2024,C014,Widget Pro,2,149.99,Southwest,Mike Johnson
+2024-01-17,C015,Widget Deluxe,,Midwest,Lisa Park
+Jan 18, 2024,C016,Widget Bundle,1,399.99,NorthEast,Sarah Chen
+2024-01-19,C017,Basic Widget,6,29.99,Southeast,David Kim
+2024-01-20,,Widget Pro,4,149.99,West,Emma Wilson
+01/21/2024,C019, Basic Widget,12,29.99,Northeast,Sarah Chen
+2024-01-22,C020,Widget Deluxe,2,299.99,Southwest,Mike Johnson
+Jan 23, 2024,C021,Widget Pro,1,149.99,Midwest,Lisa Park
+2024-01-24,C022,Widget Bundle,3,399.99,Southeast,David Kim
+2024-01-24,C022,Widget Bundle,3,399.99,Southeast,David Kim
+01/25/2024,C023,Basic Widget,7,29.99,West,Emma Wilson
+2024-01-26,C024,Widget Deluxe ,1,299.99,Northeast,Sarah Chen
+Jan 27, 2024,C025,Widget Pro,,Southwest,Mike Johnson
+2024-01-28,C026,Basic Widget,9,29.99,Midwest,Lisa Park
+2024-01-29,C027,Widget Bundle,1,399.99,Southeast,David Kim
+01/30/2024,C028, Widget Pro,2,149.99,West,Emma Wilson
+2024-01-31,,Widget Deluxe,1,299.99,Northeast,Sarah Chen
+Jan 31, 2024,C030,Basic Widget,4,29.99,Southwest,Mike Johnson
+2024-02-01,C001,Widget Pro,3,149.99,Northeast,Sarah Chen
+02/02/2024,C003,Widget Bundle,1,399.99,Midwest,Lisa Park
+2024-02-03,C005,Basic Widget,20,29.99,Southeast,David Kim
+Feb 4, 2024,C007,Widget Deluxe,2,299.99,West,Emma Wilson
+2024-02-05,C009,Widget Pro,1,149.99,Midwest,Lisa Park
+02/06/2024,C011, Widget Bundle ,2,399.99,Southeast,David Kim
+2024-02-07,C013,Basic Widget,8,29.99,Northeast,Sarah Chen
+Feb 8, 2024,C015,Widget Pro,4,149.99,Midwest,Lisa Park
+2024-02-09,C017,Widget Deluxe,1,299.99,Southeast,David Kim
+2024-02-10,,Widget Bundle,1,399.99,West,Emma Wilson
+02/11/2024,C021,Basic Widget,11,29.99,Midwest,Lisa Park
+2024-02-12,C023,Widget Pro,2,149.99,West,Emma Wilson
+Feb 13, 2024,C025,Widget Deluxe,,Southwest,Mike Johnson
+2024-02-14,C027,Widget Bundle,1,399.99,Southeast,David Kim
+2024-02-15,C001,Basic Widget,6,29.99,Northeast,Sarah Chen
+02/16/2024,C003,Widget Pro,2,149.99,Midwest,Lisa Park
+2024-02-17,C005,Widget Deluxe,1,299.99,Southeast,David Kim
+Feb 18, 2024,C007, Widget Bundle,3,399.99,West,Emma Wilson
+2024-02-19,C009,Basic Widget,14,29.99,Midwest,Lisa Park
+02/20/2024,C011,Widget Pro,1,149.99,Southeast,David Kim
+2024-02-21,C013,Widget Deluxe,2,299.99,Northeast,Sarah Chen
+Feb 22, 2024,C015,Widget Bundle,1,399.99,midwest,Lisa Park
+2024-02-23,C017,Basic Widget,5,29.99,Southeast,David Kim
+2024-02-24,C019,Widget Pro,3,149.99,West,Emma Wilson

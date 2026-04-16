@@ -1,0 +1,28 @@
+customer_id,company_name,industry,segment,region,contact_email
+C001,Acme Corporation,Manufacturing,Enterprise,Northeast,buyer@acme.com
+C002,TechStart Inc,Technology,SMB,Southwest,orders@techstart.io
+C003,MidWest Medical,Healthcare,Enterprise,Midwest,procurement@midwestmed.org
+C004, DataDriven LLC ,Technology,Startup,Northeast,info@datadriven.co
+C005,Southern Retail Co,Retail,SMB,Southeast,purchasing@southernretail.com
+C006,Pacific Finance,Finance,Enterprise,West,accounts@pacificfin.com
+C007,Northeast Manufacturing,,Enterprise,Northeast,orders@nemfg.com
+C008,Desert Tech Solutions,Technology,smb,Southwest,sales@deserttech.io
+C009,Heartland Health,Healthcare,enterprise,Midwest,buyer@heartlandhealth.org
+C010,Atlantic Retail Group,Retail,Enterprise,Northeast,procurement@atlanticretail.com
+C011,Gulf Coast Logistics,Manufacturing,SMB,Southeast,orders@gulfcoast.net
+C012,West Coast Innovations,Technology,Startup,West,info@wcinnovations.com
+C013, Premier Industries,Manufacturing,ENTERPRISE,Northeast,buyer@premierind.com
+C014,Southwest Solutions,Finance,SMB,Southwest,accounts@swsolutions.com
+C015,Central Healthcare,Healthcare,Enterprise,Midwest,purchasing@centralhealth.org
+C016,Sunrise Retail,Retail,,Northeast,orders@sunriseretailcom
+C017,Southern Manufacturing,Manufacturing,SMB,Southeast,procurement@southernmfg.com
+C018,Mountain Tech,Technology,Startup,West,info@mountaintech.io
+C019,Eastern Finance Corp,Finance,Enterprise,Northeast,accounts@easternfin.com
+C020,Valley Medical Center,Healthcare,SMB,Southwest,buyer@valleymed.org
+C021,Plains Manufacturing,,enterprise,Midwest,orders@plainsmfg.com
+C022,Coastal Retail Inc,Retail,Enterprise,Southeast,purchasing@coastalretail.com
+C023,Golden State Tech,Technology,SMB,West,sales@goldenstatetech.com
+C024, Harbor Industries ,Manufacturing,Startup,Northeast,info@harborindcom
+C025,Rio Grande Health,Healthcare,Enterprise,Southwest,procurement@riohealth.org
+C050,Phantom Corp,Technology,Enterprise,Northeast,ghost@phantomcorp.com
+C051,Missing Customer Inc,Finance,SMB,West,info@missingcustomer.com

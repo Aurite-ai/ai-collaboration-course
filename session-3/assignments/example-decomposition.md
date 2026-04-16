@@ -1,6 +1,6 @@
 # Worked Example: Customer Churn Analysis Pipeline
 
-This is a complete worked example showing how to decompose a complex task, assign modes, and write a detailed sub-agent prompt.
+This is a complete worked example showing how to write a G/R/S/O prompt to coordinate complex AI work and understand the expected workflow.
 
 **Note:** This uses a *different* scenario than the assignment (customer churn analysis instead of quarterly sales report) so you can see the expected format without having the answer given away.
 
@@ -19,132 +19,159 @@ Your data science team lead asks:
 
 ---
 
-## Part 1: Task Decomposition
+## Part 1: G/R/S/O Prompt
 
-### Task 1: Data Assessment
+This is the prompt you would write to coordinate this work. Notice: you're not specifying every step — you're describing what needs to be achieved and letting the AI plan the details.
 
-- **Description:** Examine all three data sources to understand their structure, quality, and how they can be joined together.
-- **Input:** Raw CSV files (activity logs, support tickets, billing data)
-- **Output:** Data assessment report documenting schema, quality issues, and join keys
-- **Dependencies:** None
+### Goal (G)
 
-### Task 2: Pipeline Design
+Build an automated customer churn analysis pipeline that identifies at-risk customers, explains why they're at risk, and produces a report with actionable recommendations for the retention team.
 
-- **Description:** Design the data pipeline architecture including cleaning, feature engineering, and analysis approach.
-- **Input:** Data assessment report from Task 1
-- **Output:** Design document with pipeline stages, feature definitions, and churn criteria
-- **Dependencies:** Task 1
+### Rules (R)
 
-### Task 3: Design Review
+- All three data sources (activity logs, support tickets, billing) must be incorporated
+- Churn definition must be unambiguous and implementable as code
+- Risk scoring must produce actionable segments, not just a single number
+- Final output must be understandable by non-technical retention team members
+- Use a rules-based or simple statistical approach — no complex ML models
 
-- **Description:** Review the pipeline design for completeness, feasibility, and alignment with business goals.
-- **Input:** Design document from Task 2
-- **Output:** Assessment with findings, gaps identified, and recommendations
-- **Dependencies:** Task 2
+### Strategies (S)
 
-### Task 4: Pipeline Implementation
+- Start by assessing data quality and join keys before designing the pipeline
+- Define churn operationally based on billing data (e.g., payment gaps > X days)
+- Create features from all three data sources that might indicate churn risk
+- Use Python for implementation — pandas for data processing
+- Structure the final report with executive summary, methodology, findings, recommendations
 
-- **Description:** Build the data pipeline according to the approved design.
-- **Input:** Approved design document (after Task 3 revisions if needed)
-- **Output:** Working Python script that produces churn analysis results
-- **Dependencies:** Task 2, Task 3
+### Opening (O)
 
-### Task 5: Results Analysis
+**Available data files:**
+- Customer activity logs (CSV): Contains `customer_id`, `activity_type`, `timestamp`, `session_duration`
+- Support tickets (CSV): Contains `customer_id`, `ticket_date`, `category`, `resolution_time`, `satisfaction_score`
+- Billing data (CSV): Contains `customer_id`, `plan_type`, `monthly_amount`, `signup_date`, `last_payment_date`
 
-- **Description:** Analyze the pipeline output to extract insights and formulate recommendations.
-- **Input:** Churn analysis results from Task 4
-- **Output:** Insights document with key findings and retention recommendations
-- **Dependencies:** Task 4
+**Data quality observations:**
+- Activity logs have some missing `session_duration` values
+- Support tickets have inconsistent `category` naming
+- Billing data appears complete but needs date parsing
 
-### Task 6: Report Generation
+**Current state:**
+- No existing pipeline or analysis
+- Retention team has requested this for quarterly planning
+- Data files are in the /data directory
 
-- **Description:** Compile findings into a presentation-ready report for the retention team.
-- **Input:** Insights document from Task 5, design document from Task 2
-- **Output:** Final report with executive summary, methodology, findings, and recommendations
-- **Dependencies:** Task 5
-
----
-
-## Part 2: Mode Assignments
-
-| Task | Mode | Justification |
-|------|------|---------------|
-| Task 1: Data Assessment | Research | Gathering and documenting information about the data |
-| Task 2: Pipeline Design | Architect | Creating a new design with decisions about structure |
-| Task 3: Design Review | Analysis | Critiquing the design against criteria |
-| Task 4: Pipeline Implementation | Code | Following the design to produce working code |
-| Task 5: Results Analysis | Analysis | Interpreting results and identifying patterns |
-| Task 6: Report Generation | Architect | Creating a new document structure with synthesis |
+**Available resources:**
+- Python environment with pandas, numpy
+- Previous quarter's ad-hoc analysis (for reference format, not for reuse)
 
 ---
 
-## Part 3: Detailed Sub-Agent Prompt
+## Part 2: Expected Workflow
 
-**Task selected:** Task 2: Pipeline Design
+Here's what the AI will do with your prompt:
 
-### Context
+### Planning Phase
 
-We're building an automated customer churn analysis pipeline for the retention team. The goal is to identify at-risk customers and understand churn drivers.
+- **What happens:** The AI analyzes your requirements and designs the approach
+- **What it will produce:** A design document and implementation plan covering:
+  - Data cleaning approach for each source
+  - Feature engineering definitions
+  - Churn definition criteria
+  - Risk scoring methodology
+  - Pipeline architecture
+  - Report structure
+- **How your G/R/S/O guides it:** Your Rules (all three sources, unambiguous churn definition, actionable segments) and Strategies (rules-based approach, pandas) set the boundaries. The Planning phase explores options *within* those boundaries.
 
-**Data Assessment Summary (from Task 1):**
-- Customer activity logs: 50,000 rows, columns include customer_id, activity_type, timestamp, session_duration
-- Support tickets: 12,000 rows, columns include customer_id, ticket_date, category, resolution_time, satisfaction_score
-- Billing data: 8,000 unique customers, columns include customer_id, plan_type, monthly_amount, signup_date, last_payment_date
+### Execution Phase
 
-**Key findings from assessment:**
-- All three datasets can be joined on customer_id
-- Activity logs have 3% missing session_duration values
-- Support tickets have categories: billing, technical, account, other
-- Billing data shows 15% of customers have payment gaps > 30 days
+- **What happens:** The AI follows the plan to produce working code and output
+- **What it will produce:** Working Python code that:
+  - Loads and cleans the three CSV files
+  - Engineers the features defined in the plan
+  - Applies the churn definition
+  - Calculates risk scores
+  - Generates the report
+- **How the plan guides it:** The plan becomes specific instructions. For example, "Create a feature called `support_ticket_count` calculated as the count of tickets per customer_id in the last 90 days" — the Execution phase follows this exactly without reinterpreting.
 
-### Task
+### Verification Phase
 
-Design the data pipeline architecture for the churn analysis. Your design should cover:
+- **Needed?** Yes
+- **Why:** This is a data pipeline with business impact. Verification ensures the implementation matches the design and the output is correct.
+- **What it will check:**
+  - All three data sources are loaded and joined correctly
+  - Features match the definitions in the plan
+  - Churn classification logic matches the specification
+  - Risk segments are distinct and actionable
+  - Report format is suitable for non-technical audience
 
-1. **Data cleaning approach** — How to handle missing values and data quality issues
-2. **Feature engineering** — What features to create that might predict churn
-3. **Churn definition** — How we operationally define "churned" vs "active"
-4. **Analysis approach** — What method to use for identifying churn risk
+---
 
-Focus on practical, implementable decisions. We're not building a complex ML model — we want a rules-based or simple statistical approach that the retention team can understand.
+## Part 3: Flow-Through Reflection
 
-### Deliverable
+### What constraints will guide the Planning phase?
 
-A design document with the following sections:
+Your prompt flows to the Planning phase with these constraints:
+- **From Rules:** "All three data sources must be incorporated" → Planning must design a pipeline that uses all three
+- **From Rules:** "Churn definition must be unambiguous" → Planning must produce a precise, implementable definition
+- **From Rules:** "No complex ML models" → Planning designs rules-based scoring, not neural networks
+- **From Strategies:** "Use Python/pandas" → Planning designs for this technology stack
 
-1. **Pipeline Overview** — High-level flow diagram (ASCII is fine)
-2. **Data Cleaning Steps** — Specific actions for each data quality issue
-3. **Feature Definitions** — Table of features with name, calculation, and rationale
-4. **Churn Definition** — Precise criteria for classifying customers
-5. **Risk Scoring Approach** — How at-risk customers will be identified
-6. **Output Specification** — What the final analysis output looks like
+### What will become specific instructions for the Execution phase?
 
-### Success Criteria
+The plan contains specifics like:
+- "Load activity_logs.csv using pandas.read_csv()"
+- "Handle missing session_duration by imputing with median value"
+- "Create feature: `days_since_last_activity` = current_date - max(timestamp) per customer_id"
+- "Define churned = True if last_payment_date > 30 days ago"
+- "Calculate risk_score = weighted sum of [feature list]"
 
-- [ ] All three data sources are incorporated into the pipeline
-- [ ] Missing value handling is specified for each known issue
-- [ ] At least 5 features are defined with clear calculations
-- [ ] Churn definition is unambiguous (could be implemented as code)
-- [ ] Risk scoring produces actionable segments (not just one number)
-- [ ] Output format is suitable for the retention team (non-technical audience)
+These are **specific** — the Execution phase follows them exactly without making design decisions.
+
+### Where is the handoff point?
+
+The **handoff point** is when the plan is complete.
+
+```
+You ──G/R/S/O──► AI Coordinator ──G/R/S/O──► Planning ──Plan──► Execution
+                                                          ▲
+                                                   HANDOFF POINT
+                                              (G/R/S/O ends here)
+```
+
+**Before the handoff point:** Exploration and decision-making happen. The Planning phase considers options, makes tradeoffs, defines specifics. Your G/R/S/O prompt guides these decisions but doesn't make them directly.
+
+**After the handoff point:** Specific execution. The Execution phase doesn't decide *what* to build — the plan already specifies that. The Execution phase decides only *how* to build it (variable names, code organization, etc.).
 
 ---
 
 ## Why This Example Works
 
-Notice several things about this decomposition:
+Notice several things about this approach:
 
-1. **Clear deliverables** — Every task produces something concrete (report, document, code, etc.)
+1. **You wrote ONE prompt** — to coordinate the work. You didn't write separate detailed instructions for planning, execution, and verification. The AI handles that breakdown.
 
-2. **Logical flow** — Each task builds on previous ones. You can't design without assessing, can't implement without designing, can't analyze without results.
+2. **G/R/S/O structure at coordination level** — Your Goal describes the outcome. Your Rules are hard constraints. Your Strategies guide without dictating. Your Opening establishes concrete context.
 
-3. **Generate-critique cycle** — Tasks 2 and 3 form a generate-critique pair. The design (Architect) gets reviewed (Analysis) before implementation proceeds.
+3. **The flow-through is clear** — Your constraints flow to the Planning phase, the Planning phase's decisions become the plan, the plan becomes specific instructions for the Execution phase.
 
-4. **Mode selection follows function** — Research for gathering info, Architect for creating, Analysis for reviewing, Code for implementing.
+4. **Workflow is explicit** — Planning → Execution → Verification. Each phase produces something concrete before the next begins.
 
-5. **Detailed prompt has all four sections** — Context gives background, Task gives scope, Deliverable gives structure, Success Criteria gives verification.
+5. **The handoff point is identified** — The plan is where high-level guidance ends. Everything after that is specific execution.
 
-6. **Success criteria are checkable** — Not "good design" but "at least 5 features defined with clear calculations."
+6. **Verification is justified** — Not every task needs it, but this one does because of business impact.
+
+---
+
+## Comparison: Assignment vs. Example
+
+| Aspect | This Example (Churn) | Your Assignment (Sales Report) |
+|--------|---------------------|-------------------------------|
+| Domain | Customer retention | Sales analytics |
+| Data sources | Activity, tickets, billing | Sales transactions, customer demographics |
+| Output | Risk report for retention team | Quarterly report for management |
+| Key challenge | Defining churn criteria | Integrating and cleaning messy data |
+
+The *structure* is the same — the *content* is different. Use this example as a format guide, not a content guide.
 
 ---
 

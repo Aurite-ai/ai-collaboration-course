@@ -1,118 +1,134 @@
-# Session 3 Assignment: Orchestration Plan
+# Session 3 Assignment: Coordinating Complex AI Tasks
 
 ## Student Name: _______________
+## (Optional) Student Email: _______________
+---
+
+## Part 1: G/R/S/O Prompt for Quarterly Sales Report
+
+Write your complete G/R/S/O prompt for the quarterly sales report task.
+
+### Goal (G)
+
+[What the coordinated work should achieve. Describe the outcome, not the process. What does success look like?]
+
+### Rules (R)
+
+[Hard constraints the work must satisfy. These are non-negotiable requirements, not preferences.]
+
+- [Constraint 1]
+- [Constraint 2]
+- [Constraint 3]
+- [Add more as needed]
+
+### Strategies (S)
+
+[Suggested approaches or phasing. These guide the AI without dictating every detail.]
+
+- [Strategy 1]
+- [Strategy 2]
+- [Add more as needed]
+
+### Opening (O)
+
+[Current state and available context. Reference the actual data files you examined.]
+
+**Available data files:**
+
+- `data/sales_transactions.csv` — [Describe what you observed: columns, row count, date range, any data quality issues you noticed]
+- `data/customer_demographics.csv` — [Describe what you observed: columns, customer count, join key, any data quality issues]
+- `data/q4_report_template.md` — [Describe the expected output format based on the template]
+
+**Data quality observations:**
+
+- [Issue 1 you noticed in the data]
+- [Issue 2 you noticed in the data]
+- [Add more as needed]
+
+**Current state:**
+
+- [What exists now? What has already been done?]
 
 ---
 
-## Part 1: Task Decomposition
+## Part 2: Expected Workflow
 
-Break the quarterly sales report goal into 4-6 sub-agent tasks.
+Describe the step-by-step workflow you expect.
 
-### Task 1: [Name]
+### Planning Phase
 
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
+- **What happens:** [Describe what the planning phase will do]
+- **What it will produce:** [Expected deliverable — e.g., design document, implementation plan]
+- **How your G/R/S/O guides it:** [Which parts of your prompt inform this phase?]
 
-### Task 2: [Name]
+### Execution Phase
 
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
+- **What happens:** [Describe what the execution phase will do]
+- **What it will produce:** [Expected deliverable — e.g., Python script, cleaned data, report]
+- **How the plan guides it:** [What specific instructions will it follow from the plan?]
 
-### Task 3: [Name]
+### Verification Phase
 
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
-
-### Task 4: [Name]
-
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
-
-### Task 5: [Name] (Optional)
-
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
-
-### Task 6: [Name] (Optional)
-
-- **Description:** [What this task accomplishes]
-- **Input:** [What context/data this sub-agent needs]
-- **Output:** [The specific deliverable]
-- **Dependencies:** [Which tasks must complete first, or "None"]
+- **Needed?** [ ] Yes  [ ] No
+- **Why or why not:** [Justify your answer]
+- **If yes, what it will check:** [What success criteria will be verified?]
 
 ---
 
-## Part 2: Mode Assignments
+## Part 3: Flow-Through Reflection
 
-Assign a mode to each task and justify your choice.
+Answer these questions about how your prompt flows through the system.
 
-| Task | Mode | Justification |
-|------|------|---------------|
-| Task 1: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
-| Task 2: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
-| Task 3: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
-| Task 4: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
-| Task 5: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
-| Task 6: [Name] | [Research / Architect / Analysis / Code] | [Why this mode fits] |
+### What constraints will guide the Planning phase?
 
----
+[Which of your Rules (R) will shape the design? How will the Planning phase use your constraints to make decisions?]
 
-## Part 3: Detailed Sub-Agent Prompt
+### What will become specific instructions for the Execution phase?
 
-**Task selected:** [Which task you're writing the prompt for]
+[What will the plan contain that the Execution phase follows literally? Give specific examples.]
 
-Write the full prompt that would be given to this sub-agent.
+### Where is the handoff point?
 
-### Context
+[At what point does your high-level G/R/S/O prompt end and specific execution begin? What artifact marks this transition?]
 
-[Background the sub-agent needs to know. Include:
-- What project this is part of
-- What has been completed in prior tasks
-- Any relevant constraints or requirements
-- Reference to inputs/documents it should use]
+```
+You ──G/R/S/O──► AI Coordinator ──G/R/S/O──► Planning ──Plan──► Execution
+                                                          ▲
+                                                      WHERE?
+```
 
-### Task
-
-[What specifically this sub-agent should do. Be precise about:
-- The scope of the work
-- What decisions it should make
-- What it should NOT do (if relevant)]
-
-### Deliverable
-
-[What the sub-agent should produce. Include:
-- The format (document, code, report, etc.)
-- The structure or sections expected
-- Level of detail required]
-
-### Success Criteria
-
-[How to verify this sub-agent succeeded. List specific, checkable criteria:
-- What must be included
-- What quality standards apply
-- How completeness is measured]
+[Explain where the handoff occurs and what changes at that point.]
 
 ---
 
-## Optional: Reflection Notes
+## Self-Check Before Submitting
 
-*Use this space to capture any thoughts about the process.*
+Verify your work against each criterion:
 
-**What was challenging?**
+| Criterion | ✅ Pass | ❌ Needs Work | Notes |
+|-----------|---------|---------------|-------|
+| **Goal (G)** describes outcome, not process | | | |
+| **Rules (R)** are hard constraints, not preferences | | | |
+| **Strategies (S)** guide without dictating | | | |
+| **Opening (O)** references actual data files | | | |
+| **Opening (O)** includes data quality observations | | | |
+| **Workflow** describes Planning → Execution → Verification | | | |
+| **Flow-through** shows how constraints reach each phase | | | |
+| **Handoff point** is clearly identified | | | |
+
+**Passing criteria:** All eight items should be ✅ Pass.
+
+---
+
+## Reflection Notes (Optional)
+
+*Use this space to capture thoughts about the process.*
+
+**How was writing for coordination different from Session 1?**
 
 [Your notes]
 
-**What would you do differently?**
+**What would you do differently next time?**
 
 [Your notes]
 
