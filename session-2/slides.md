@@ -472,21 +472,18 @@ As your projects grow, this becomes more and more valuable. We'll see how this s
 
 ---
 
-# Optional Assignments
+# Optional Assignment
 
-Practice what you've learned with hands-on exercises:
+Practice what you've learned with a hands-on exercise:
 
-**Available Assignments:**
+**Two-Mode Workflow** — Walk through the G/R/S/O → Plan → Execute flow yourself
 
-1. **Two-Mode Workflow** — Practice the G/R/S/O → Plan → Execute flow
-2. **Document Review** — Practice reviewing AI-generated designs
-3. **Context Curation** — Practice identifying relevant vs. stale context
+**Where to find it:**
 
-**Where to find them:**
+📁 `outreach/courses/ai-collaboration/session-2/assignments/`
 
-📁 `outreach/courses/ai-collaboration/assignments/session-2/`
+*Optional but recommended before Lecture 3.*
 
-*These are optional but recommended before Lecture 3.*
 
 <!--
 Before we wrap up, I want to point you to the optional assignments for this session.
